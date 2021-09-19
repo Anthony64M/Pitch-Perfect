@@ -7,8 +7,7 @@ app = create_app('ddevelopment')
 
 manager = Manager(app)
 migrate = Migrate(app,db)
-
-manager.add_command('serevr',Server)
+manager.add_command('server',Server)
 manager.add_command('run',Server(use_debugger=True))
 
 
